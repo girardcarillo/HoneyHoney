@@ -9,3 +9,7 @@ Data are sent to a MQTT broker.
 This project was initially developed to remotely control the weigh of a hive, in order to determine the best time for harvest.
 
 Many thanks to Seb ;)
+
+# Scaling 
+
+![image](RaspiScale.jpg)
