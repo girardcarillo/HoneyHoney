@@ -1,8 +1,8 @@
-## HoneyHoney project
+# HoneyHoney project
 
 Python Software developed to build a Raspberry Pi scale, using Weight Sensor HX711.
 Main code HoneyHoney.py largely inspired by https://github.com/tatobari/hx711py 
-Useful tuto to build your scale: https://tutorials-raspberrypi.com/digital-raspberry-pi-scale-weight-sensor-hx711/
+Useful tuto to build your scale: https://tutorials-raspberrypi.com/digital-raspberry-pi-scale-weight-sensor-hx711/.
 
 Data are sent to a MQTT broker.
 
@@ -10,7 +10,9 @@ This project was initially developed to remotely control the weigh of a hive, in
 
 Many thanks to Seb ;)
 
-# Using MQTT client with Pyhton
+## Preparation
+
+- Using MQTT client with Python
 
 If you want to use this feature, please download the librairy.
 For Linux:
@@ -18,7 +20,13 @@ For Linux:
 sudo apt-get install -y python-paho-mqtt
 ```
 
-# Calibrating your scale
+- Clone the GitHub project
+
+``` 
+git clone https://github.com/girardcarillo/HoneyHoney.git
+```
+
+## Calibrating your scale
 
 In file HoneyHoney.py search for the line 
 ```
@@ -33,8 +41,6 @@ In your terminal run
 ```
 sudo python HoneyHoney.py
 ```
-The values printed on your screen 
-
 The correct calibration of the weight sensor and the Raspberry Pi balance is crucial. For this we need a comparison object whose weight we know. 
 For example, take two packs of milk (1kg each), but keep in mind it is recommended to choose an average value of the maximum you want to weigh.
 Place it on the scale and run the Python code again.
@@ -48,6 +54,6 @@ hx.set_reference_unit(-441)
 # hx.set_reference_unit(referenceUnit)
 ```
 
-You can now test to weigh the world.
+Your scale is ready, you can now weigh the world.
  
 ![image](RaspiScale.jpg)
