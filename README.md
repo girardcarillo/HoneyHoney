@@ -43,6 +43,18 @@ sudo python HoneyHoney.py
 ```
 Some values are printing in your terminal, and the tare of the balance is done, creating a file 'tare.txt' to record the date and time of the tare.
 
+## Taring the scale only once
+DISCLAIMER: this section is ONLY a temporary solution.
+Do not use if you are not Seb ;)
+
+After the first time you've run the code, some lines, corresponding to the offset value, where printed on the terminal, for example
+```('offset', -219764)```
+Take this offset value (in this example -219764).
+In file hx711.py, comment the line 275 and uncomment the 280.
+Edit the line 280 with the printed offset value.
+Save the file. 
+
+
 ## Calibrating your scale
 
 The correct calibration of the weight sensor and the Raspberry Pi balance is crucial. For this we need a comparison object whose weight we know. 

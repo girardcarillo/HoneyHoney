@@ -273,10 +273,15 @@ class HX711:
             print("Tare A value:", value)
         
         self.set_offset_A(value)
-
+        # I would only tare the first time I use the scale, and then keep the same value
+        # This is NOT a final solution, but more an ugly way to do it.
+        # To be updated
+        print ('offset',value)
+        # self.set_offset_A(-219781)
+        
         # Restore the reference unit, now that we've got our offset.
         self.set_reference_unit_A(backupReferenceUnit)
-
+        
         return value
 
 
