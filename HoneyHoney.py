@@ -51,14 +51,14 @@ def cleanAndExit():
 
 # waiting for the internet connection to establish
 # a more sophisticated way can be obtained by using the is_connected() method at the beginning of this code.
-time.sleep(60)
+# time.sleep(60)
 
 hx = HX711(5, 6)
 
 hx.set_reading_format("MSB", "MSB")
 
-# hx.set_reference_unit(25)
-hx.set_reference_unit(referenceUnit)
+hx.set_reference_unit(25)
+# hx.set_reference_unit(referenceUnit)
 
 hx.reset()
 hx.tare()
