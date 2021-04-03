@@ -16,13 +16,15 @@ Many thanks to Seb ;)
 
 If you want to use this feature, please download the librairy.
 For Linux:
-```sudo apt-get install -y python-paho-mqtt
+```
+sudo apt-get install -y python-paho-mqtt
 ```
 
 - Clone the GitHub project
 
 Go to the /home/pi/ directory and clone the git repository
-```git clone https://github.com/girardcarillo/HoneyHoney.git
+```
+git clone https://github.com/girardcarillo/HoneyHoney.git
 ```
 ## Configure the soft
 Go to HoneyHoney directory.
