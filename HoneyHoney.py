@@ -4,6 +4,7 @@ import time
 import sys
 import paho.mqtt.client as mqtt
 import os.path
+import json
 from datetime import date
 from datetime import datetime
 
@@ -51,13 +52,13 @@ def cleanAndExit():
 
 # waiting for the internet connection to establish
 # a more sophisticated way can be obtained by using the is_connected() method at the beginning of this code.
-# time.sleep(60)
+time.sleep(60)
 
 hx = HX711(5, 6)
 
 hx.set_reading_format("MSB", "MSB")
 
-hx.set_reference_unit(24)
+hx.set_reference_unit(22)
 # hx.set_reference_unit(referenceUnit)
 
 hx.reset()
@@ -76,8 +77,10 @@ while True:
         hx.power_up()
 
         myClient = mqtt.Client()
-        myClient.connect("mqtt.avsit.io", 1883)
-        myClient.publish("HoneyWeight",val)
+        data_set = {"weight":val}
+        json_dump = json.dumps(data_set)   
+        myClient.connect("<mqtt.hostname>", 1883)
+        myClient.publish("rpi3_2806549e",json_dump)
 
         time.sleep(DataTime)
 
