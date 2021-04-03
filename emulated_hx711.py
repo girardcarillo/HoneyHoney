@@ -219,6 +219,9 @@ class HX711:
         # Restore the reference unit, now that we've got our offset.
         self.set_reference_unit(reference_unit)
 
+        print("tare value")
+        print(value)
+        
         return value;
 
     

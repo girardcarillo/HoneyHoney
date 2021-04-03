@@ -26,6 +26,9 @@ Go to the /home/pi/ directory and clone the git repository
 ``` 
 git clone https://github.com/girardcarillo/HoneyHoney.git
 ```
+## Prepare the software
+
+sudo ./config.sh 
 
 ## First use of the scale
  
