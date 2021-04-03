@@ -73,9 +73,6 @@ The line now looks as follows:
 hx.set_reference_unit(-441)
 # hx.set_reference_unit(referenceUnit)
 ```
-Rq: if you are using the scale for the first time, a tare operation is done, creating a file 'tare.txt'.
-If you want to tare the scale again, you'll have to erase this 'tare.txt' file, and do the calibrating work all over again.
-
 Your scale is ready, you can now weigh the world :honeybee: :honeybee: :honeybee:
 
 
