@@ -32,20 +32,24 @@ Go to HoneyHoney directory.
 The `config.sh` executable writes in `/etc/rc.local` in order to execute the HoneyHoney script at
 each boot.
 So if you want the `HoneyHoney.py` to be launched at boot, please:
-```sudo ./config.sh
+```
+sudo ./config.sh
 ```
 Now if you boot your Raspi again, the python process should be running.
 
 ## First use of the scale
 
 In the file HoneyHoney.py search for the line
-```hx.set_reference_unit(24)
+```
+hx.set_reference_unit(24)
 ```
 and comment it. Uncomment the line
-```hx.set_reference_unit(referenceUnit)
+```
+hx.set_reference_unit(referenceUnit)
 ```
 With nothing on the scale, in your terminal run
-```sudo python HoneyHoney.py
+```
+sudo python HoneyHoney.py
 ```
 Some values are printing in your terminal, and the tare of the balance is done, creating a file 'tare.txt' to record the date and time of the tare.
 
@@ -61,7 +65,8 @@ For example, if at 2kg (= 2000 gramm) values around -882000 are displayed, then 
 Then edit the HoneyHoney.py file in the same way as above described, remove the comment hashtag and enter this value accordingly.
 The line now looks as follows:
 
-```hx.set_reference_unit(-441)
+```
+hx.set_reference_unit(-441)
 # hx.set_reference_unit(referenceUnit)
 ```
 Rq: if you are using the scale for the first time, a tare operation is done, creating a file 'tare.txt'.
