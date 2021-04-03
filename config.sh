@@ -1,3 +1,5 @@
+sudo rm /etc/rc.local
+
 sudo echo "#!/bin/sh -e
 #
 # rc.local

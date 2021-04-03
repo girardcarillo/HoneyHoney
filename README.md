@@ -35,6 +35,7 @@ So if you want the `HoneyHoney.py` to be launched at boot, please:
 ```
 sudo ./config.sh
 ```
+Check if the file had been correctly written, otherwise you will not be able to boot anymore.
 Now when you will boot your Raspi again, the python process should be running (better to test this feature at
 the end of this tuto).
 
