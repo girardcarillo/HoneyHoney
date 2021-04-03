@@ -53,10 +53,10 @@ With nothing on the scale, in your terminal run
 sudo python HoneyHoney.py
 ```
 Some values are printing in your terminal, and the tare of the balance is done, creating a file
-'tare.txt' to record the offset value.
+`tare.txt` to record the offset value.
 
 Rq: for our needs, the tare is only done once (at first use).
-You can tare again at anytime by removing the tare.txt file.
+You can tare again at anytime by removing the `tare.txt` file.
 If you want to remove this feature, please edit the `tare_A()` method in `hx711.py`.
 
 ## Calibrating your scale
