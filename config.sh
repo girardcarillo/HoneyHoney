@@ -1,3 +1,10 @@
+#Check if package is installed, if no --> install
+if [ $(dpkg-query -W -f='${Status}' python-paho-mqtt 2>/dev/null | grep -c "ok installed") -eq 0 ];
+then
+  sudo apt-get install -y python-paho-mqtt;
+fi
+
+#Cleanup & rewrite rc.local
 sudo rm /etc/rc.local
 
 sudo echo "#!/bin/sh -e
